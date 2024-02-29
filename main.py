@@ -13,7 +13,7 @@ class Gato:
 
     def correr(self, metros):
         if self.vivo:
-            self.energia -= metros / 2
+            self.energia -= round(metros / 2)
             if self.energia <= 0:
                 self.vivo = False
                 print(f"[{datetime.datetime.now()}] {self.nombre}, Me he quedado sin energía y me morí.")
@@ -29,7 +29,7 @@ class Gato:
 
     def jugar(self, tiempo_minutos):
         if self.vivo:
-            self.energia -= tiempo_minutos * 0.1
+            self.energia -= round(tiempo_minutos * 0.1)
             if self.energia <= 0:
                 self.vivo = False
                 print(f"[{datetime.datetime.now()}] {self.nombre}, Me cansé demasiado y me morí.")
@@ -86,7 +86,7 @@ def salir():
 
 def menu():
     print("| LENGUAJES FORMALES Y DE PROGRAMACION |")
-    print("| SECCION: B+                          |")
+    print("| SECCION: B-                          |")
     print("| CARNET:20201367                      |")
 
     input("Presione Enter para continuar...")
@@ -109,47 +109,67 @@ def menu():
 def procesarComandosPetManager(comandos):
     gato = None  # Creamos una instancia de Gato fuera del bucle para que sea accesible en todo momento
 
-    for comando in comandos:
-        partes = comando.split(':')
+    with open("resultado.petworld_result", "w") as archivo_salida:
+        for comando in comandos:
+            partes = comando.split(':')
 
-        if partes[0] == "Crear_Gato":
-            nombre_gato = partes[1]
-            gato = Gato(nombre_gato)
-            print(f"[{datetime.datetime.now()}] Se creó el gato {nombre_gato}")
+            if partes[0] == "Crear_Gato":
+                nombre_gato = partes[1]
+                gato = Gato(nombre_gato)
+                mensaje = f"[{datetime.datetime.now()}] Se creó el gato {nombre_gato}\n"
+                print(mensaje)
+                archivo_salida.write(mensaje)
 
-        elif partes[0] == "Dar_de_Comer":
-            if gato is not None:
-                if gato.vivo:
-                    # Dividir la cadena en nombre del gato y peso del ratón
-                    nombre_gato, peso_ratón = partes[1].split(',')
-                    peso_ratón = int(peso_ratón)  # Convertir peso_ratón a entero
-                    gato.comer(peso_ratón)
+            elif partes[0] == "Dar_de_Comer":
+                if gato is not None:
+                    if gato.vivo:
+                        # Dividir la cadena en nombre del gato y peso del ratón
+                        nombre_gato, peso_ratón = partes[1].split(',')
+                        peso_ratón = int(peso_ratón)  # Convertir peso_ratón a entero
+                        gato.comer(peso_ratón)
+                        mensaje = f"[{datetime.datetime.now()}] {nombre_gato}, Gracias por alimentarme. Ahora mi energía es {gato.energia}.\n"
+                        print(mensaje)
+                        archivo_salida.write(mensaje)
+                    else:
+                        mensaje = f"[{datetime.datetime.now()}] Muy tarde. Ya me morí.\n"
+                        print(mensaje)
+                        archivo_salida.write(mensaje)
+
+            elif partes[0] == "Jugar":
+                if gato is not None:
+                    if gato.vivo:
+                        # Dividir la cadena en nombre del gato y tiempo de juego
+                        nombre_gato, tiempo_juego = partes[1].split(',')
+                        tiempo_juego = int(tiempo_juego)  # Convertir tiempo_juego a entero
+                        gato.jugar(tiempo_juego)
+                        mensaje = f"[{datetime.datetime.now()}] {nombre_gato}, Gracias por jugar conmigo. Ahora mi energía es {gato.energia}.\n"
+                        print(mensaje)
+                        archivo_salida.write(mensaje)
+                    else:
+                        mensaje = f"[{datetime.datetime.now()}] Ya me morí.\n"
+                        print(mensaje)
+                        archivo_salida.write(mensaje)
+
+            elif partes[0] == "Resumen_Mascota":
+                if gato is not None:
+                    mensaje = f"[{datetime.datetime.now()}] {nombre_gato}, Energía: {gato.energia}, Tipo: Gato, Estado: {'Vivo' if gato.vivo else 'Muerto'}\n"
+                    print(mensaje)
+                    archivo_salida.write(mensaje)
+
+            elif partes[0] == "Resumen_Global":
+                if gato is not None:
+                    mensaje = f"[{datetime.datetime.now()}] {nombre_gato}, Energía: {gato.energia}, Tipo: Gato, Estado: {'Vivo' if gato.vivo else 'Muerto'}\n"
+                    print(mensaje)
+                    archivo_salida.write(mensaje)
                 else:
-                    print(f"[{datetime.datetime.now()}] Muy tarde. Ya me morí.")
+                    mensaje = f"[{datetime.datetime.now()}] No hay gato para resumir.\n"
+                    print(mensaje)
+                    archivo_salida.write(mensaje)
 
-        elif partes[0] == "Jugar":
-            if gato is not None:
-                if gato.vivo:
-                    # Dividir la cadena en nombre del gato y tiempo de juego
-                    nombre_gato, tiempo_juego = partes[1].split(',')
-                    tiempo_juego = int(tiempo_juego)  # Convertir tiempo_juego a entero
-                    gato.jugar(tiempo_juego)
-                else:
-                    print(f"[{datetime.datetime.now()}] Ya me morí.")
-
-        elif partes[0] == "Resumen_Mascota":
-            if gato is not None:
-                gato.resumen()
-
-        elif partes[0] == "Resumen_Global":
-            if gato is not None:
-                gato.resumen()
             else:
-                print("[{}] No hay gato para resumir.".format(datetime.datetime.now()))
-
-        else:
-            print(f"[{datetime.datetime.now()}] Comando desconocido: {partes[0]}")
-
+                mensaje = f"[{datetime.datetime.now()}] Comando desconocido: {partes[0]}\n"
+                print(mensaje)
+                archivo_salida.write(mensaje)
             
 def leerArchivoPetManager():
     print("\nHa seleccionado cargar archivo .petmanager\n")
