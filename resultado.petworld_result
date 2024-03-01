@@ -1,83 +1,100 @@
-[2024-02-29 08:04:02.440067] Se creó el gato  Coco
-[2024-02-29 08:04:02.440067] Se creó el gato  Gizmo
-[2024-02-29 08:04:02.441072] Se creó el gato  Misty
-[2024-02-29 08:04:02.442071] Se creó el gato  Shadow
-[2024-02-29 08:04:02.442071] Se creó el gato  Oreo
-[2024-02-29 08:04:02.443068] Se creó el gato  Rocky
-[2024-02-29 08:04:02.443068] Se creó el gato  Bella
-[2024-02-29 08:04:02.444071] Se creó el gato  Max
-[2024-02-29 08:04:02.444551] Se creó el gato  Snowball
-[2024-02-29 08:04:02.445545] Se creó el gato  Simba
-[2024-02-29 08:04:02.446547] Se creó el gato  Milo
-[2024-02-29 08:04:02.447638] Se creó el gato  Luna
-[2024-02-29 08:04:02.448638] Se creó el gato  Whiskers
-[2024-02-29 08:04:02.449644] Se creó el gato  Garfield
-[2024-02-29 08:04:02.449644] Se creó el gato  Felix
-[2024-02-29 08:04:02.450638] Se creó el gato  Patch
-[2024-02-29 08:04:02.452322] Comando desconocido: 
-[2024-02-29 08:04:02.453323] Comando desconocido: 
-[2024-02-29 08:04:02.454831]  Garfield, Gracias por alimentarme. Ahora mi energía es 762.
-[2024-02-29 08:04:02.454831]  Garfield, Gracias por jugar conmigo. Ahora mi energía es 761.
-[2024-02-29 08:04:02.456342]  Garfield, Energía: 761, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.457394] Comando desconocido: 
-[2024-02-29 08:04:02.457394]  Felix, Gracias por alimentarme. Ahora mi energía es 1273.
-[2024-02-29 08:04:02.458480]  Felix, Gracias por jugar conmigo. Ahora mi energía es 1271.
-[2024-02-29 08:04:02.459480]  Felix, Energía: 1271, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.459480] Comando desconocido: 
-[2024-02-29 08:04:02.460480]  Whiskers, Gracias por alimentarme. Ahora mi energía es 1683.
-[2024-02-29 08:04:02.461481]  Whiskers, Gracias por jugar conmigo. Ahora mi energía es 1681.
-[2024-02-29 08:04:02.462478]  Whiskers, Energía: 1681, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.462478] Comando desconocido: 
-[2024-02-29 08:04:02.463477]  Luna, Gracias por alimentarme. Ahora mi energía es 2143.
-[2024-02-29 08:04:02.464321]  Luna, Gracias por jugar conmigo. Ahora mi energía es 2141.
-[2024-02-29 08:04:02.465251]  Luna, Energía: 2141, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.466262] Comando desconocido: 
-[2024-02-29 08:04:02.467779]  Simba, Gracias por alimentarme. Ahora mi energía es 2703.
-[2024-02-29 08:04:02.468783]  Simba, Gracias por jugar conmigo. Ahora mi energía es 2701.
-[2024-02-29 08:04:02.468783]  Simba, Energía: 2701, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.469783] Comando desconocido: 
-[2024-02-29 08:04:02.470782]  Snowball, Gracias por alimentarme. Ahora mi energía es 3193.
-[2024-02-29 08:04:02.471783]  Snowball, Gracias por jugar conmigo. Ahora mi energía es 3191.
-[2024-02-29 08:04:02.471783]  Snowball, Energía: 3191, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.472783] Comando desconocido: 
-[2024-02-29 08:04:02.473783]  Max, Gracias por alimentarme. Ahora mi energía es 3723.
-[2024-02-29 08:04:02.473783]  Max, Gracias por jugar conmigo. Ahora mi energía es 3721.
-[2024-02-29 08:04:02.474785]  Max, Energía: 3721, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.474785] Comando desconocido: 
-[2024-02-29 08:04:02.474785]  Bella, Gracias por alimentarme. Ahora mi energía es 4223.
-[2024-02-29 08:04:02.476297]  Bella, Gracias por jugar conmigo. Ahora mi energía es 4221.
-[2024-02-29 08:04:02.477316]  Bella, Energía: 4221, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.477316] Comando desconocido: 
-[2024-02-29 08:04:02.477316]  Oreo, Gracias por alimentarme. Ahora mi energía es 4703.
-[2024-02-29 08:04:02.478779]  Oreo, Gracias por jugar conmigo. Ahora mi energía es 4701.
-[2024-02-29 08:04:02.478779]  Oreo, Energía: 4701, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.479899] Comando desconocido: 
-[2024-02-29 08:04:02.479899]  Shadow, Gracias por alimentarme. Ahora mi energía es 5243.
-[2024-02-29 08:04:02.479899]  Shadow, Gracias por jugar conmigo. Ahora mi energía es 5241.
-[2024-02-29 08:04:02.479899]  Shadow, Energía: 5241, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.479899] Comando desconocido: 
-[2024-02-29 08:04:02.479899]  Misty, Gracias por alimentarme. Ahora mi energía es 5673.
-[2024-02-29 08:04:02.484428]  Misty, Gracias por jugar conmigo. Ahora mi energía es 5672.
-[2024-02-29 08:04:02.484428]  Misty, Energía: 5672, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.484428] Comando desconocido: 
-[2024-02-29 08:04:02.485428]  Coco, Gracias por alimentarme. Ahora mi energía es 6194.
-[2024-02-29 08:04:02.486431]  Coco, Gracias por jugar conmigo. Ahora mi energía es 6192.
-[2024-02-29 08:04:02.486431]  Coco, Energía: 6192, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.486431] Comando desconocido: 
-[2024-02-29 08:04:02.487700]  Gizmo, Gracias por alimentarme. Ahora mi energía es 6664.
-[2024-02-29 08:04:02.488699]  Gizmo, Gracias por jugar conmigo. Ahora mi energía es 6662.
-[2024-02-29 08:04:02.488699]  Gizmo, Energía: 6662, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.488699] Comando desconocido: 
-[2024-02-29 08:04:02.489698]  Rocky, Gracias por alimentarme. Ahora mi energía es 7214.
-[2024-02-29 08:04:02.489698]  Rocky, Gracias por jugar conmigo. Ahora mi energía es 7212.
-[2024-02-29 08:04:02.490699]  Rocky, Energía: 7212, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.490699] Comando desconocido: 
-[2024-02-29 08:04:02.491698]  Milo, Gracias por alimentarme. Ahora mi energía es 7704.
-[2024-02-29 08:04:02.491698]  Milo, Gracias por jugar conmigo. Ahora mi energía es 7702.
-[2024-02-29 08:04:02.492567]  Milo, Energía: 7702, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.492567] Comando desconocido: 
-[2024-02-29 08:04:02.492567]  Patch, Gracias por alimentarme. Ahora mi energía es 8214.
-[2024-02-29 08:04:02.492567]  Patch, Gracias por jugar conmigo. Ahora mi energía es 8212.
-[2024-02-29 08:04:02.492567]  Patch, Energía: 8212, Tipo: Gato, Estado: Vivo
-[2024-02-29 08:04:02.492567] Comando desconocido: 
-[2024-02-29 08:04:02.492567]  Patch, Energía: 8212, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:16.438419] Se creï¿½ el gato  Coco
+[2024-02-29 21:48:16.438419] Se creï¿½ el gato  Gizmo
+[2024-02-29 21:48:16.438419] Se creï¿½ el gato  Misty
+[2024-02-29 21:48:16.442430] Se creï¿½ el gato  Shadow
+[2024-02-29 21:48:16.442430] Se creï¿½ el gato  Oreo
+[2024-02-29 21:48:16.442939] Se creï¿½ el gato  Rocky
+[2024-02-29 21:48:16.442939] Se creï¿½ el gato  Bella
+[2024-02-29 21:48:16.443994] Se creï¿½ el gato  Max
+[2024-02-29 21:48:16.445178] Se creï¿½ el gato  Snowball
+[2024-02-29 21:48:16.445925] Se creï¿½ el gato  Simba
+[2024-02-29 21:48:16.445925] Se creï¿½ el gato  Milo
+[2024-02-29 21:48:16.445925] Se creï¿½ el gato  Luna
+[2024-02-29 21:48:16.445925] Se creï¿½ el gato  Whiskers
+[2024-02-29 21:48:16.445925] Se creï¿½ el gato  Garfield
+[2024-02-29 21:48:16.445925] Se creï¿½ el gato  Felix
+[2024-02-29 21:48:16.445925] Se creï¿½ el gato  Patch
+[2024-02-29 21:48:16.445925] Comando desconocido: 
+[2024-02-29 21:48:16.445925] Comando desconocido: 
+[2024-02-29 21:48:16.445925]  Garfield, Gracias por alimentarme. Ahora mi energï¿½a es 762.
+[2024-02-29 21:48:16.445925]  Garfield, Gracias por jugar conmigo. Ahora mi energï¿½a es 761.0.
+[2024-02-29 21:48:16.451144]  Garfield, Energï¿½a: 761.0, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:16.580476] Comando desconocido: 
+[2024-02-29 21:48:16.584022]  Felix, Gracias por alimentarme. Ahora mi energï¿½a es 562.
+[2024-02-29 21:48:16.584022]  Felix, Gracias por jugar conmigo. Ahora mi energï¿½a es 560.0.
+[2024-02-29 21:48:16.584022]  Felix, Energï¿½a: 560.0, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:16.707653] Comando desconocido: 
+[2024-02-29 21:48:16.707653]  Whiskers, Gracias por alimentarme. Ahora mi energï¿½a es 462.
+[2024-02-29 21:48:16.707653]  Whiskers, Gracias por jugar conmigo. Ahora mi energï¿½a es 459.5.
+[2024-02-29 21:48:16.707653]  Whiskers, Energï¿½a: 459.5, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:16.823922] Comando desconocido: 
+[2024-02-29 21:48:16.827473]  Luna, Gracias por alimentarme. Ahora mi energï¿½a es 512.
+[2024-02-29 21:48:16.827473]  Luna, Gracias por jugar conmigo. Ahora mi energï¿½a es 510.2.
+[2024-02-29 21:48:16.827473]  Luna, Energï¿½a: 510.2, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:16.944150] Comando desconocido: 
+[2024-02-29 21:48:16.945643]  Simba, Gracias por alimentarme. Ahora mi energï¿½a es 612.
+[2024-02-29 21:48:16.945643]  Simba, Gracias por jugar conmigo. Ahora mi energï¿½a es 609.8.
+[2024-02-29 21:48:16.945643]  Simba, Energï¿½a: 609.8, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:17.070874] Comando desconocido: 
+[2024-02-29 21:48:17.073924]  Snowball, Gracias por alimentarme. Ahora mi energï¿½a es 542.
+[2024-02-29 21:48:17.073924]  Snowball, Gracias por jugar conmigo. Ahora mi energï¿½a es 540.4.
+[2024-02-29 21:48:17.073924]  Snowball, Energï¿½a: 540.4, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:17.195903] Comando desconocido: 
+[2024-02-29 21:48:17.202917]  Max, Gracias por alimentarme. Ahora mi energï¿½a es 582.
+[2024-02-29 21:48:17.203949]  Max, Gracias por jugar conmigo. Ahora mi energï¿½a es 580.1.
+[2024-02-29 21:48:17.203949]  Max, Energï¿½a: 580.1, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:17.314120] Comando desconocido: 
+[2024-02-29 21:48:17.314120]  Bella, Gracias por alimentarme. Ahora mi energï¿½a es 552.
+[2024-02-29 21:48:17.323222]  Bella, Gracias por jugar conmigo. Ahora mi energï¿½a es 549.9.
+[2024-02-29 21:48:17.323750]  Bella, Energï¿½a: 549.9, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:17.436525] Comando desconocido: 
+[2024-02-29 21:48:17.436525]  Oreo, Gracias por alimentarme. Ahora mi energï¿½a es 532.
+[2024-02-29 21:48:17.436525]  Oreo, Gracias por jugar conmigo. Ahora mi energï¿½a es 530.3.
+[2024-02-29 21:48:17.436525]  Oreo, Energï¿½a: 530.3, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:17.579358] Comando desconocido: 
+[2024-02-29 21:48:17.582062]  Shadow, Gracias por alimentarme. Ahora mi energï¿½a es 592.
+[2024-02-29 21:48:17.582909]  Shadow, Gracias por jugar conmigo. Ahora mi energï¿½a es 589.7.
+[2024-02-29 21:48:17.584002]  Shadow, Energï¿½a: 589.7, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:17.746866] Comando desconocido: 
+[2024-02-29 21:48:17.747942]  Misty, Gracias por alimentarme. Ahora mi energï¿½a es 482.
+[2024-02-29 21:48:17.749463]  Misty, Gracias por jugar conmigo. Ahora mi energï¿½a es 480.6.
+[2024-02-29 21:48:17.749589]  Misty, Energï¿½a: 480.6, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:17.913940] Comando desconocido: 
+[2024-02-29 21:48:17.913940]  Coco, Gracias por alimentarme. Ahora mi energï¿½a es 572.
+[2024-02-29 21:48:17.913940]  Coco, Gracias por jugar conmigo. Ahora mi energï¿½a es 570.2.
+[2024-02-29 21:48:17.913940]  Coco, Energï¿½a: 570.2, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.073789] Comando desconocido: 
+[2024-02-29 21:48:18.075455]  Gizmo, Gracias por alimentarme. Ahora mi energï¿½a es 522.
+[2024-02-29 21:48:18.075533]  Gizmo, Gracias por jugar conmigo. Ahora mi energï¿½a es 520.0.
+[2024-02-29 21:48:18.075533]  Gizmo, Energï¿½a: 520.0, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.233824] Comando desconocido: 
+[2024-02-29 21:48:18.233824]  Rocky, Gracias por alimentarme. Ahora mi energï¿½a es 602.
+[2024-02-29 21:48:18.233824]  Rocky, Gracias por jugar conmigo. Ahora mi energï¿½a es 599.8.
+[2024-02-29 21:48:18.239997]  Rocky, Energï¿½a: 599.8, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.382953] Comando desconocido: 
+[2024-02-29 21:48:18.384059]  Milo, Gracias por alimentarme. Ahora mi energï¿½a es 542.
+[2024-02-29 21:48:18.384059]  Milo, Gracias por jugar conmigo. Ahora mi energï¿½a es 540.4.
+[2024-02-29 21:48:18.384059]  Milo, Energï¿½a: 540.4, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.514022] Comando desconocido: 
+[2024-02-29 21:48:18.514022]  Patch, Gracias por alimentarme. Ahora mi energï¿½a es 562.
+[2024-02-29 21:48:18.514022]  Patch, Gracias por jugar conmigo. Ahora mi energï¿½a es 560.1.
+[2024-02-29 21:48:18.514022]  Patch, Energï¿½a: 560.1, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.650153] Comando desconocido: 
+[2024-02-29 21:48:18.650153] ------------------------------ Resumen Global ------------------------------
+[2024-02-29 21:48:18.650153]  Coco, Energï¿½a: 570.2, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.650153]  Gizmo, Energï¿½a: 520.0, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.650153]  Misty, Energï¿½a: 480.6, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.650153]  Shadow, Energï¿½a: 589.7, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.653163]  Oreo, Energï¿½a: 530.3, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.653704]  Rocky, Energï¿½a: 599.8, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.653704]  Bella, Energï¿½a: 549.9, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.653704]  Max, Energï¿½a: 580.1, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.655246]  Snowball, Energï¿½a: 540.4, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.655246]  Simba, Energï¿½a: 609.8, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.656255]  Milo, Energï¿½a: 540.4, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.656255]  Luna, Energï¿½a: 510.2, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.657433]  Whiskers, Energï¿½a: 459.5, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.658453]  Garfield, Energï¿½a: 761.0, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.660236]  Felix, Energï¿½a: 560.0, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.660236]  Patch, Energï¿½a: 560.1, Tipo: Gato, Estado: Vivo
+[2024-02-29 21:48:18.662520] ----------------------------------------------------------------------

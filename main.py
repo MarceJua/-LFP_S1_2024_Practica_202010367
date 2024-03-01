@@ -1,67 +1,7 @@
-
+from gato import Gato
 import datetime
 import os
-
-diccionarioDatos = dict()
-listaDatos = []
-
-class Gato:
-    def __init__(self, nombre):
-        self.nombre = nombre
-        self.energia = 50  # Energía inicial del gato
-        self.vivo = True
-
-    def correr(self, metros):
-        if self.vivo:
-            self.energia -= round(metros / 2)
-            if self.energia <= 0:
-                self.vivo = False
-                print(f"[{datetime.datetime.now()}] {self.nombre}, Me he quedado sin energía y me morí.")
-        else:
-            print(f"[{datetime.datetime.now()}] {self.nombre}, Ya me morí.")
-
-    def comer(self, peso_ratón):
-        if self.vivo:
-            self.energia += 12 + peso_ratón
-            print(f"[{datetime.datetime.now()}] {self.nombre}, Gracias por alimentarme. Ahora mi energía es {self.energia}.")
-        else:
-            print(f"[{datetime.datetime.now()}] {self.nombre}, Muy tarde. Ya me morí.")
-
-    def jugar(self, tiempo_minutos):
-        if self.vivo:
-            self.energia -= round(tiempo_minutos * 0.1)
-            if self.energia <= 0:
-                self.vivo = False
-                print(f"[{datetime.datetime.now()}] {self.nombre}, Me cansé demasiado y me morí.")
-            else:
-                print(f"[{datetime.datetime.now()}] {self.nombre}, Gracias por jugar conmigo. Ahora mi energía es {self.energia}.")
-        else:
-            print(f"[{datetime.datetime.now()}] {self.nombre}, Ya me morí.")
-
-    def resumen(self):
-        estado = "Vivo" if self.vivo else "Muerto"
-        print(f"[{datetime.datetime.now()}] {self.nombre}, Energía: {self.energia}, Tipo: Gato, Estado: {estado}")
-
-"""
-# Ejemplo de uso
-gato = Gato("Garfield")
-
-# Crear gato
-gato.resumen()
-
-# Dar de comer al gato
-gato.comer(100)
-
-# Jugar con el gato
-gato.jugar(30)
-
-# Correr con el gato
-gato.correr(20)
-
-# Resumen del gato
-gato.resumen()
-"""
-
+from graphviz import Digraph
 
 def modulPet(): #módulo petmanager
     # Limpiar la pantalla
@@ -82,7 +22,6 @@ def modulPet(): #módulo petmanager
 def salir():
     print("Gracias por usar el programa")
     input("Presione una tecla para continuar...") 
-
 
 def menu():
     print("| LENGUAJES FORMALES Y DE PROGRAMACION |")
@@ -107,25 +46,25 @@ def menu():
             print("Opción incorrecta")
 
 def procesarComandosPetManager(comandos):
-    gato = None  # Creamos una instancia de Gato fuera del bucle para que sea accesible en todo momento
+    gatos = {}  # Diccionario para almacenar los gatos creados
+
 
     with open("resultado.petworld_result", "w") as archivo_salida:
         for comando in comandos:
             partes = comando.split(':')
-
             if partes[0] == "Crear_Gato":
                 nombre_gato = partes[1]
-                gato = Gato(nombre_gato)
+                gatos[nombre_gato] = Gato(nombre_gato)  # Crear un nuevo gato y almacenarlo en el diccionario
                 mensaje = f"[{datetime.datetime.now()}] Se creó el gato {nombre_gato}\n"
                 print(mensaje)
                 archivo_salida.write(mensaje)
-
+                
             elif partes[0] == "Dar_de_Comer":
-                if gato is not None:
+                nombre_gato = partes[1].split(',')[0]  # Obtener el nombre del gato
+                if nombre_gato in gatos:  # Verificar si el gato existe en el diccionario
+                    gato = gatos[nombre_gato]
                     if gato.vivo:
-                        # Dividir la cadena en nombre del gato y peso del ratón
-                        nombre_gato, peso_ratón = partes[1].split(',')
-                        peso_ratón = int(peso_ratón)  # Convertir peso_ratón a entero
+                        peso_ratón = int(partes[1].split(',')[1])
                         gato.comer(peso_ratón)
                         mensaje = f"[{datetime.datetime.now()}] {nombre_gato}, Gracias por alimentarme. Ahora mi energía es {gato.energia}.\n"
                         print(mensaje)
@@ -134,13 +73,17 @@ def procesarComandosPetManager(comandos):
                         mensaje = f"[{datetime.datetime.now()}] Muy tarde. Ya me morí.\n"
                         print(mensaje)
                         archivo_salida.write(mensaje)
+                else:
+                    mensaje = f"[{datetime.datetime.now()}] Gato no encontrado: {nombre_gato}\n"
+                    print(mensaje)
+                    archivo_salida.write(mensaje)
 
             elif partes[0] == "Jugar":
-                if gato is not None:
+                nombre_gato = partes[1].split(',')[0]  # Obtener el nombre del gato
+                if nombre_gato in gatos:  # Verificar si el gato existe en el diccionario
+                    gato = gatos[nombre_gato]
                     if gato.vivo:
-                        # Dividir la cadena en nombre del gato y tiempo de juego
-                        nombre_gato, tiempo_juego = partes[1].split(',')
-                        tiempo_juego = int(tiempo_juego)  # Convertir tiempo_juego a entero
+                        tiempo_juego = int(partes[1].split(',')[1])
                         gato.jugar(tiempo_juego)
                         mensaje = f"[{datetime.datetime.now()}] {nombre_gato}, Gracias por jugar conmigo. Ahora mi energía es {gato.energia}.\n"
                         print(mensaje)
@@ -149,22 +92,36 @@ def procesarComandosPetManager(comandos):
                         mensaje = f"[{datetime.datetime.now()}] Ya me morí.\n"
                         print(mensaje)
                         archivo_salida.write(mensaje)
+                else:
+                    mensaje = f"[{datetime.datetime.now()}] Gato no encontrado: {nombre_gato}\n"
+                    print(mensaje)
+                    archivo_salida.write(mensaje)
 
             elif partes[0] == "Resumen_Mascota":
-                if gato is not None:
+                nombre_gato = partes[1]
+                if nombre_gato in gatos:  # Verificar si el gato existe en el diccionario
+                    gato = gatos[nombre_gato]
                     mensaje = f"[{datetime.datetime.now()}] {nombre_gato}, Energía: {gato.energia}, Tipo: Gato, Estado: {'Vivo' if gato.vivo else 'Muerto'}\n"
+                    print(mensaje)
+                    archivo_salida.write(mensaje)
+                    # Generar el gráfico con la información del gato
+                    generar_grafico(nombre_gato, gato.energia, 'Vivo' if gato.vivo else 'Muerto')
+                else:
+                    mensaje = f"[{datetime.datetime.now()}] Gato no encontrado: {nombre_gato}\n"
                     print(mensaje)
                     archivo_salida.write(mensaje)
 
             elif partes[0] == "Resumen_Global":
-                if gato is not None:
+                archivo_salida.write(f"[{datetime.datetime.now()}] {'-'*30} Resumen Global {'-'*30}\n")
+                for nombre_gato, gato in gatos.items():
                     mensaje = f"[{datetime.datetime.now()}] {nombre_gato}, Energía: {gato.energia}, Tipo: Gato, Estado: {'Vivo' if gato.vivo else 'Muerto'}\n"
                     print(mensaje)
                     archivo_salida.write(mensaje)
-                else:
-                    mensaje = f"[{datetime.datetime.now()}] No hay gato para resumir.\n"
+                if not gatos:  # Verificar si no hay gatos
+                    mensaje = f"[{datetime.datetime.now()}] No hay gatos para resumir.\n"
                     print(mensaje)
                     archivo_salida.write(mensaje)
+                archivo_salida.write(f"[{datetime.datetime.now()}] {'-'*70}\n")
 
             else:
                 mensaje = f"[{datetime.datetime.now()}] Comando desconocido: {partes[0]}\n"
@@ -187,7 +144,30 @@ def leerArchivoPetManager():
     with open(ruta, "r") as archivo:
         comandos_petmanager = [linea.strip() for linea in archivo]
 
+    #procesar_comandos(comandos_petmanager)
     procesarComandosPetManager(comandos_petmanager)
+
+# Función para generar el gráfico
+def generar_grafico(nombre_gato, energia, estado):
+    # Crear un objeto Digraph
+    dot = Digraph()
+
+    # Agregar el nodo principal (nombre del gato)
+    dot.node(nombre_gato, label=nombre_gato)
+
+    # Agregar nodos secundarios (energía y estado)
+    dot.node('energia', label=f'Energía: {energia}')
+    dot.node('tipo', label=f'Tipo: Gato')
+    dot.node('estado', label=f'Estado: {estado}')
+
+    # Agregar bordes desde el nodo principal a los nodos secundarios
+    dot.edge(nombre_gato, 'energia')
+    dot.edge(nombre_gato, 'tipo')
+    dot.edge(nombre_gato, 'estado')
+
+    # Renderizar y guardar el gráfico como un archivo PNG con un nombre único
+    nombre_archivo = f'grafico_{nombre_gato}'
+    dot.render(nombre_archivo, format='png', cleanup=True)
 
 menu()
 
