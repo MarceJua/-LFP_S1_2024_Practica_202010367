@@ -1,5 +1,4 @@
 import datetime
-import os
 from graphviz import Digraph
 
 diccionarioDatos = dict()

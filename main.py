@@ -49,10 +49,10 @@ def procesarComandosPetManager(comandos):
     gatos = {}  # Diccionario para almacenar los gatos creados
 
 
-    with open("resultado.petworld_result", "w") as archivo_salida:
+    with open("resultado.petworld_result", "w") as archivo_salida: # Abre un archivo de salida llamado "resultado.petworld_result" en modo de escritura
         for comando in comandos:
             partes = comando.split(':')
-            if partes[0] == "Crear_Gato":
+            if partes[0] == "Crear_Gato": # Procesamiento de los Comandos:
                 nombre_gato = partes[1]
                 gatos[nombre_gato] = Gato(nombre_gato)  # Crear un nuevo gato y almacenarlo en el diccionario
                 mensaje = f"[{datetime.datetime.now()}] Se creó el gato {nombre_gato}\n"
@@ -134,18 +134,18 @@ def leerArchivoPetManager():
 
     while True:
         nombre, extension = os.path.splitext(ruta)
-        if extension == ".petmanager":
+        if extension == ".petmanager": # verifica que la extension se .petmanager
             print("\nArchivo válido\n")
             break
         else:
             print("\nArchivo inválido\n")
             ruta = input("\nIngrese la ruta del archivo: ")
 
-    with open(ruta, "r") as archivo:
-        comandos_petmanager = [linea.strip() for linea in archivo]
+    with open(ruta, "r") as archivo: # Abre el archivo en modo de lectura.
+        comandos_petmanager = [linea.strip() for linea in archivo] #Lee cada línea del archivo 
+                                                                    #y elimina los espacios en blanco al inicio y al final de cada línea.
 
-    #procesar_comandos(comandos_petmanager)
-    procesarComandosPetManager(comandos_petmanager)
+    procesarComandosPetManager(comandos_petmanager) #Almacena los comandos del archivo en una lista
 
 # Función para generar el gráfico
 def generar_grafico(nombre_gato, energia, estado):
